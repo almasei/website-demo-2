@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     SEO / META
+     ============================================================ -->
+<title>Proaktiv — Ganzheitliche Gesundheitsberatung für Männer 40+ | Alexander Seitz</title>
+<meta name="description" content="1:1 Gesundheitscoaching für Männer über 40: 5–10 kg Bauchfett verlieren und gesunde Lebensjahre gewinnen. Evidenzbasiert, individuell, ohne Hype. Mit Alexander Seitz.">
+<meta name="author" content="Alexander Seitz">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.proaktiv-coaching.de/">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Proaktiv">
+<meta property="og:title" content="5–10 kg Bauchfett verlieren & gesunde Lebensjahre gewinnen — Proaktiv">
+<meta property="og:description" content="1:1 Gesundheitscoaching für Männer 40+. Evidenzbasiert, individuell, ohne Hype. Mit Alexander Seitz.">
+<meta property="og:url" content="https://www.proaktiv-coaching.de/">
+<meta property="og:image" content="https://www.proaktiv-coaching.de/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proaktiv — Ganzheitliche Gesundheitsberatung für Männer 40+">
+<meta name="twitter:description" content="5–10 kg Bauchfett verlieren & gesunde Lebensjahre gewinnen. 1:1 Coaching mit Alexander Seitz.">
+<meta name="twitter:image" content="https://www.proaktiv-coaching.de/hero.jpg">
+<meta name="theme-color" content="#06120D">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- JSON-LD: Personal Brand -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alexander Seitz",
+  "jobTitle": "Ganzheitlicher Gesundheitsberater",
+  "description": "Premium 1:1 Gesundheitscoaching für Männer über 40.",
+  "url": "https://www.proaktiv-coaching.de/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" }
+}
+</script>
+
+<style>
+/* ============================================================
+   1. DESIGN TOKENS  — hier zentral Farben & Maße anpassen
+   ============================================================ */
+:root{
+  --dark:      #06120D;   /* Haupt-Hintergrund (fast schwarz, grünstichig) */
+  --dark-2:    #0A1812;   /* Karten / abgesetzte Flächen */
+  --green:     #112A20;   /* Forest-Green Sektionen */
+  --green-2:   #0D2018;
+  --gold:      #C9A86A;   /* Akzent: CTAs, Headlines, Icons */
+  --gold-soft: #D9C091;
+  --cream:     #EDE6D8;   /* Fließtext hell */
+  --muted:     #9DAAA0;   /* gedämpfter Text */
+  --line:      rgba(201,168,106,.18); /* feine Trennlinien / Rahmen */
+
+  --serif: "Playfair Display", Georgia, serif;
+  --sans:  "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --container: 1180px;
+  --pad: clamp(22px, 5vw, 48px);
+  --section-y: clamp(78px, 12vh, 150px);
+  --radius: 14px;
+}
+
+/* ============================================================
+   2. RESET / BASE
+   ============================================================ */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  font-family:var(--sans);
+  background:var(--dark);
+  color:var(--cream);
+  line-height:1.7;
+  font-size:clamp(16px, 1.05vw, 17px);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{ display:block; max-width:100%; }
+a{ color:inherit; text-decoration:none; }
+::selection{ background:var(--gold); color:var(--dark); }
+
+.container{ width:100%; max-width:var(--container); margin:0 auto; padding:0 var(--pad); }
+
+/* Typografie-Helfer */
+h1,h2,h3{ font-family:var(--serif); font-weight:500; line-height:1.12; letter-spacing:-.01em; }
+em{ font-style:italic; color:var(--gold); }
+
+.eyebrow{
+  font-family:var(--sans);
+  font-size:.74rem; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold);
+}
+.eyebrow.num::before{ content:attr(data-num); opacity:.6; margin-right:.7em; }
+
+.h2{ font-size:clamp(1.9rem, 4.4vw, 3.1rem); }
+#programm .h2 em, #formular .h2 em{ font-style:normal; }
+.lead{ color:var(--muted); font-size:clamp(1.02rem,1.7vw,1.18rem); max-width:62ch; }
+
+/* ============================================================
+   3. BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex; align-items:center; gap:.6em;
+  font-family:var(--sans); font-weight:600; font-size:.97rem;
+  letter-spacing:.01em;
+  padding:1.05em 1.7em;
+  border-radius:100px;
+  background:var(--gold); color:var(--dark);
+  border:1px solid var(--gold);
+  cursor:pointer;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, background .3s;
+  box-shadow:0 10px 30px -12px rgba(201,168,106,.5);
+}
+.btn:hover{ transform:translateY(-3px); box-shadow:0 18px 40px -12px rgba(201,168,106,.6); background:var(--gold-soft); }
+.btn svg{ transition:transform .35s; }
+.btn:hover svg{ transform:translateX(4px); }
+.btn--ghost{
+  background:transparent; color:var(--cream);
+  border:1px solid var(--line); box-shadow:none;
+}
+.btn--ghost:hover{ background:rgba(201,168,106,.08); border-color:var(--gold); transform:translateY(-3px); }
+
+/* ============================================================
+   4. HEADER
+   ============================================================ */
+.site-header{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px var(--pad);
+  transition:background .4s, padding .4s, border-color .4s;
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled{
+  background:rgba(6,18,13,.82);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  padding:12px var(--pad);
+}
+.logo{ height:24px; width:auto; }
+.nav{ display:flex; align-items:center; gap:34px; }
+.nav a.navlink{
+  font-size:.92rem; color:var(--cream); opacity:.82;
+  transition:opacity .25s; position:relative;
+}
+.nav a.navlink:hover{ opacity:1; }
+.nav a.navlink::after{
+  content:""; position:absolute; left:0; bottom:-5px; height:1px; width:0;
+  background:var(--gold); transition:width .3s;
+}
+.nav a.navlink:hover::after{ width:100%; }
+.nav .btn{ padding:.7em 1.3em; font-size:.88rem; }
+
+/* Burger */
+.burger{ display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; padding:8px; }
+.burger span{ width:24px; height:2px; background:var(--cream); transition:.3s; }
+.mobile-menu{
+  position:fixed; inset:0; z-index:99;
+  background:rgba(6,18,13,.97); backdrop-filter:blur(8px);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:30px;
+  opacity:0; pointer-events:none; transition:opacity .35s;
+}
+.mobile-menu.open{ opacity:1; pointer-events:auto; }
+.mobile-menu a{ font-family:var(--serif); font-size:1.7rem; }
+
+/* ============================================================
+   5. HERO
+   ============================================================ */
+/* Gepinnte „Bühne": Intro-Headline blendet beim Scrollen aus,
+   die echte Hero-Sektion blendet dahinter ein (Crossfade). */
+.hero-stage{ position:relative; height:200vh; }      /* Scroll-Distanz, solange gepinnt */
+.hero-pin{
+  position:sticky; top:0; height:100vh; overflow:hidden;
+  display:grid;                                        /* beide Layer übereinander */
+}
+.hero-pin > *{ grid-area:1 / 1; }
+.hero-glow{
+  position:absolute; top:-10%; right:-5%; width:60vw; height:60vw; max-width:760px; max-height:760px;
+  background:radial-gradient(circle, rgba(201,168,106,.10), transparent 62%);
+  pointer-events:none; z-index:0;
+}
+
+/* Layer 1 — Intro-Headline (zuerst sichtbar, zentriert, voller Screen) */
+.intro-layer{
+  z-index:2; position:relative;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:80px var(--pad);
+  will-change:opacity, transform;
+}
+.intro-eye{ margin-bottom:28px; }
+.intro-h1{
+  font-family:var(--serif); font-weight:500; letter-spacing:-.01em;
+  line-height:1.12; font-size:clamp(2.1rem, 4.7vw, 4rem); max-width:min(94vw, 1180px); margin:0;
+}
+.intro-h1 em{ font-style:normal; color:var(--gold); }
+/* Mobile: Headline so klein, dass jede Zeile passt → nur 2 Zeilen */
+@media (max-width:620px){
+  .intro-h1{ font-size:clamp(1rem, 5vw, 1.9rem); line-height:1.18; }
+}
+.scroll-hint{
+  position:absolute; bottom:34px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:11px;
+  font-size:.7rem; letter-spacing:.24em; text-transform:uppercase; color:var(--muted);
+  will-change:opacity;
+}
+.scroll-hint .arrow{ width:1px; height:38px; background:rgba(201,168,106,.22); position:relative; overflow:hidden; }
+.scroll-hint .arrow::after{
+  content:""; position:absolute; left:0; top:0; width:100%; height:45%;
+  background:var(--gold); animation:scrolldn 1.9s cubic-bezier(.4,0,.2,1) infinite;
+}
+@keyframes scrolldn{ 0%{transform:translateY(-110%)} 100%{transform:translateY(240%)} }
+
+/* Layer 2 — echte Hero-Sektion (erscheint „dahinter") */
+.hero-layer{
+  z-index:1; position:relative;
+  display:flex; align-items:center;
+  opacity:0; will-change:opacity, transform;
+}
+.hero-wrap{
+  position:relative; z-index:1; width:100%; max-width:var(--container); margin:0 auto; padding:0 var(--pad);
+  display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(36px,5vw,70px);
+  align-items:center;
+}
+.hero-eye{ margin-bottom:22px; }
+.hero-h2{
+  font-family:var(--serif); font-weight:500; letter-spacing:-.01em; line-height:1.14;
+  font-size:clamp(1.6rem, 3.7vw, 2.85rem); margin-bottom:24px; white-space:nowrap;
+}
+.hero-h2 em{ font-style:normal; color:var(--gold); }
+.hero-sub{ color:var(--muted); font-size:clamp(1.05rem,1.7vw,1.22rem); max-width:46ch; margin-bottom:32px; }
+/* Status „alle Plätze belegt" — mattes Rot (signalisiert: nicht verfügbar) */
+.status{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:.86rem; letter-spacing:.04em; color:#D29A92;
+  padding:.55em 1.05em; border:1px solid rgba(190,92,82,.32); border-radius:100px;
+  background:rgba(190,92,82,.08); margin-bottom:30px;
+}
+.status .dot{ width:8px; height:8px; border-radius:50%; background:#C0655B; position:relative; }
+.status .dot::after{
+  content:""; position:absolute; inset:-5px; border-radius:50%;
+  border:1px solid #C0655B; opacity:.5; animation:pulse 2.4s ease-out infinite;
+}
+@keyframes pulse{ 0%{transform:scale(.6);opacity:.6} 100%{transform:scale(1.8);opacity:0} }
+.hero-ctas{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.hero-note{ font-size:.85rem; color:var(--muted); }
+
+.hero-image{ position:relative; }
+.hero-image .frame{
+  position:relative; border-radius:var(--radius); overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.7);
+}
+.hero-image img{ width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; filter:saturate(1.02); }
+.hero-image .frame::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(6,18,13,.55), transparent 45%);
+}
+.hero-caption{
+  position:absolute; left:18px; right:18px; bottom:16px; z-index:2;
+  font-size:.82rem; line-height:1.45;
+}
+.hero-caption strong{ display:block; font-weight:600; color:var(--cream); }
+.hero-caption span{ color:var(--gold-soft); }
+
+/* ============================================================
+   5b. TRUST-LEISTE
+   ============================================================ */
+.trust-bar{ padding:clamp(28px,5vh,52px) 0; }
+.trust-row{
+  display:flex; justify-content:center; align-items:center; flex-wrap:wrap;
+  gap:clamp(24px,5vw,80px); text-align:center;
+}
+.trust-item{ display:flex; flex-direction:column; gap:8px; }
+.trust-num{
+  font-family:var(--serif); font-weight:500; line-height:1;
+  font-size:clamp(2rem,3.6vw,2.9rem); color:var(--gold); letter-spacing:-.01em;
+}
+.trust-label{
+  font-family:var(--sans); font-size:.74rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted);
+}
+.trust-sep{ width:1px; height:46px; background:var(--line); flex:none; }
+@media (max-width:620px){
+  .trust-row{ flex-wrap:nowrap; gap:10px; }
+  .trust-item{ flex:1 1 0; min-width:0; gap:4px; }
+  .trust-num{ font-size:1.25rem; }
+  .trust-label{ font-size:.5rem; letter-spacing:.06em; }
+  .trust-sep{ height:32px; }
+}
+
+/* ============================================================
+   6. SECTION SHELL
+   ============================================================ */
+section{ padding:var(--section-y) 0; position:relative; }
+.section-head{ max-width:64ch; margin-bottom:clamp(40px,6vh,64px); }
+.section-head .eyebrow{ display:block; margin-bottom:18px; }
+.divider{ height:1px; background:linear-gradient(to right, transparent, var(--line), transparent); }
+.tint{ background:var(--green); }
+.tint-2{ background:var(--dark-2); }
+
+/* ============================================================
+   7. TESTIMONIALS
+   ============================================================ */
+/* Ergebnisse — Karten-Karussell (Text- & Video-Testimonials) */
+.results{ --rgap:24px; display:flex; flex-direction:column; }
+.results-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:28px; flex-wrap:wrap; margin-bottom:clamp(30px,4vh,46px); }
+.results-head .section-head{ margin:0; }
+.results-aside{ display:flex; align-items:center; }
+.stars{ color:var(--gold); letter-spacing:2px; font-size:1rem; }
+/* Trustpilot-Badge (5,0 Sterne) */
+.tp-badge{ display:inline-flex; align-items:center; gap:14px; padding:11px 18px;
+  border:1px solid var(--line); border-radius:12px; background:rgba(201,168,106,.05); }
+.tp-badge .tp-meta{ display:inline-flex; align-items:center; gap:8px; font-size:.92rem; white-space:nowrap; }
+.tp-badge .tp-score{ font-weight:700; color:var(--cream); }
+.tp-badge .tp-sep{ color:var(--muted); opacity:.5; }
+.tp-badge .tp-name{ display:inline-flex; align-items:center; gap:5px; color:var(--muted); }
+.tp-badge .tp-name .tp-star{ color:var(--gold); }
+/* CTA-Karte am Ende des Karussells */
+.r-cta{ justify-content:center; align-items:center; text-align:center; gap:22px;
+  border-style:dashed; background:rgba(201,168,106,.04); cursor:pointer; color:inherit;
+  transition:border-color .35s, background .35s, transform .35s; }
+.r-cta:hover{ border-color:var(--gold); background:rgba(201,168,106,.08); transform:translateY(-4px); }
+.r-cta-ico{ width:58px; height:58px; border-radius:50%; display:grid; place-items:center;
+  border:1px solid var(--line); color:var(--gold); transition:border-color .35s; }
+.r-cta:hover .r-cta-ico{ border-color:var(--gold); }
+.r-cta-text{ font-family:var(--serif); font-weight:500; letter-spacing:-.01em; line-height:1.25;
+  font-size:clamp(1.3rem,1.7vw,1.6rem); color:var(--cream); }
+.r-cta-text em{ font-style:normal; color:var(--gold); }
+.r-cta-link{ display:inline-flex; align-items:center; gap:8px; font-size:.92rem; font-weight:600; color:var(--gold); }
+
+.results-track{
+  display:flex; align-items:flex-start; gap:var(--rgap); overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  scrollbar-width:none; padding:4px 0 6px;
+}
+.results-track::-webkit-scrollbar{ display:none; }
+.r-card{
+  flex:0 0 calc((100% - 2*var(--rgap)) / 3); scroll-snap-align:start;
+  background:var(--dark-2); border:1px solid var(--line); border-radius:18px;
+  padding:clamp(26px,2.3vw,34px); display:flex; flex-direction:column;
+}
+.r-quote-mark{ font-family:var(--serif); font-size:6rem; line-height:.4; color:var(--gold); height:30px; }
+.r-quote{ font-family:var(--sans); font-weight:700; font-style:italic; letter-spacing:-.015em; color:var(--cream); font-size:clamp(1.2rem,1.5vw,1.45rem); line-height:1.4; margin:0; }
+/* Video-Karte: quadratisches Thumbnail oben, Zitat als Overlay unten auf dem Bild */
+.r-card--video .r-video{ margin-top:0; }
+.r-vmedia{ position:absolute; inset:0; border-radius:inherit; overflow:hidden; }
+.r-vquote{ position:absolute; left:0; right:0; bottom:0; z-index:2;
+  padding:clamp(36px,6vw,56px) clamp(18px,2vw,24px) clamp(16px,1.8vw,20px);
+  background:linear-gradient(to top, rgba(6,18,13,.96), rgba(6,18,13,.62) 45%, transparent); }
+.r-vquote .r-quote-mark{ font-size:3rem; height:16px; margin-bottom:6px; }
+.r-vquote .r-quote{ font-size:clamp(1.02rem,1.15vw,1.18rem); line-height:1.32; }
+.r-video{
+  position:relative; aspect-ratio:1/1; border-radius:12px; overflow:hidden; cursor:pointer;
+  border:1px solid var(--line);
+  background:
+    repeating-linear-gradient(45deg, rgba(237,230,216,.04) 0 9px, transparent 9px 18px),
+    linear-gradient(135deg, var(--green-2), var(--dark-2));
+  display:grid; place-items:center;
+}
+.r-thumb{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+.r-video.has-thumb::after{ content:""; position:absolute; inset:0; z-index:1;
+  background:linear-gradient(to top, rgba(6,18,13,.6), rgba(6,18,13,.12) 55%); }
+/* Play-Button: bei Foto-Thumbnails unten-rechts (verdeckt nicht das Gesicht), sonst zentriert */
+.r-play{ position:relative; z-index:3; width:56px; height:56px; border-radius:50%; cursor:pointer;
+  border:1px solid rgba(237,230,216,.55); background:rgba(6,18,13,.42); backdrop-filter:blur(4px);
+  color:var(--cream); display:grid; place-items:center; transition:transform .3s, background .3s, color .3s, border-color .3s; }
+.r-video:hover .r-play{ transform:scale(1.08); background:var(--gold); color:var(--dark); border-color:var(--gold); }
+.r-video.has-thumb .r-play{ position:absolute; right:14px; top:14px; width:48px; height:48px; }
+.r-video.has-thumb:hover .r-play{ transform:scale(1.1); }
+.r-duration{ position:absolute; left:12px; top:12px; z-index:3; font-size:.76rem; letter-spacing:.02em;
+  background:rgba(6,18,13,.72); color:var(--cream); padding:.26em .62em; border-radius:6px; }
+.r-check{ list-style:none; margin:22px 0 0; padding:22px 0 0; border-top:1px solid var(--line);
+  display:flex; flex-direction:column; gap:11px; }
+.r-card--video .r-check{ border-top:0; padding-top:0; margin-top:20px; }
+.r-check li{ position:relative; padding-left:28px; color:var(--cream); font-size:.98rem; }
+.r-check li::before{ content:""; position:absolute; left:2px; top:.36em; width:13px; height:8px;
+  border-left:2px solid var(--gold); border-bottom:2px solid var(--gold); transform:rotate(-45deg); }
+.r-foot{ margin-top:18px; display:flex; align-items:center; gap:14px; padding-top:20px; border-top:1px solid var(--line); }
+.r-card--video .r-foot{ margin-top:auto; }  /* Autor unten verankert */
+.r-foot.no-rule{ border-top:0; }
+.r-avatar{ width:46px; height:46px; border-radius:50%; flex-shrink:0; overflow:hidden; border:1px solid var(--line);
+  background:linear-gradient(135deg, var(--green), var(--dark-2));
+  display:grid; place-items:center; color:var(--gold); font-weight:600; font-size:.9rem; }
+.r-avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+.r-name{ display:block; font-weight:600; font-size:.95rem; color:var(--cream); }
+.r-meta{ display:block; font-size:.82rem; color:var(--muted); }
+
+.results-bar{ display:flex; justify-content:flex-start; margin-top:26px; }
+.results-dots{ display:flex; gap:8px; }
+.results-dots i{ width:8px; height:8px; border-radius:5px; background:rgba(237,230,216,.18); cursor:pointer; transition:width .4s, background .4s; }
+.results-dots i.on{ width:24px; background:var(--gold); }
+
+@media (max-width:1024px){
+  .r-card{ flex-basis:calc((100% - var(--rgap)) / 2); }
+}
+@media (max-width:780px){
+  .results-head{ display:contents; }
+  .results .section-head{ order:0; margin-bottom:24px; }
+  .results-track{ order:1; }
+  .results-bar{ order:2; justify-content:center; }
+  .results-aside{ order:3; flex-direction:column; gap:14px; margin-top:22px; align-self:center; }
+  .results-nav{ display:none; }
+  .r-card{ flex-basis:86%; }
+  /* Video-Karte mobil: Thumbnail oben, Zitat darunter */
+  .r-card--video .r-video{ display:flex; flex-direction:column; position:static; aspect-ratio:auto; height:auto; overflow:visible; border:0; background:none; }
+  .r-card--video .r-vmedia{ position:relative; inset:auto; order:0; width:100%; aspect-ratio:1/1; border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+  .r-card--video .r-vquote{ position:static; order:1; background:none; padding:22px 0 0; }
+  .r-card--video .r-video.has-thumb::after{ display:none; }
+  .r-card--video .r-vquote .r-quote{ font-size:clamp(1.12rem,4.4vw,1.32rem); line-height:1.36; }
+}
+
+/* ============================================================
+   8. REFRAME
+   ============================================================ */
+/* Scroll-Story: Aussagen erscheinen nacheinander beim Scrollen (gepinnte Bühne) */
+.story-stage{ position:relative; }                 /* Höhe per inline-style → steuert Scroll-Distanz */
+.story-pin{
+  position:sticky; top:0; height:100vh; overflow:hidden;
+  display:grid; place-items:center;
+}
+.story-eyebrow{
+  position:absolute; top:clamp(88px,15vh,140px); left:0; right:0;
+  text-align:center; display:block;
+}
+.story-track{ position:relative; width:100%; max-width:900px; padding:0 var(--pad); display:grid; }
+.story-step{
+  grid-area:1 / 1; align-self:center; margin:0; text-align:center; opacity:0; will-change:opacity, transform;
+  font-family:var(--sans); font-weight:500; letter-spacing:-.01em; line-height:1.3;
+  font-size:clamp(1.24rem, 2.44vw, 2rem); color:var(--cream);
+}
+.story-step em{ font-style:italic; color:var(--gold); }
+.story-step .story-soft{ color:var(--muted); }
+.story-step .story-strong{ color:var(--gold); font-style:normal; font-weight:800; }
+.story-list{ display:flex; flex-direction:column; gap:.3em; margin-top:.75em; font-size:.56em; color:var(--muted); line-height:1.35; }
+.story-list--match{ font-size:1em; color:var(--gold); text-align:left; width:max-content; max-width:90%; margin-inline:auto; }
+.story-list span{ display:block; }
+.story-list em{ color:var(--gold); font-style:italic; }
+.story-dots{
+  position:absolute; bottom:clamp(40px,7vh,74px); left:0; right:0;
+  display:flex; gap:9px; justify-content:center;
+}
+.story-dots i{ width:7px; height:7px; border-radius:50%; background:rgba(237,230,216,.16); transition:background .45s, transform .45s; }
+.story-dots i.on{ background:var(--gold); transform:scale(1.3); }
+
+/* Mobile: gleiche gepinnte Scroll-Story, nur kompakter */
+@media (max-width:880px){
+  .story-pin{ height:100svh; }
+  .story-track{ max-width:560px; }
+  .story-step{ font-size:clamp(1.08rem, 4.16vw, 1.68rem); }
+  .story-eyebrow{ top:clamp(70px,11vh,108px); }
+  .story-dots{ bottom:clamp(26px,5vh,50px); }
+}
+/* Reduced-Motion: keine Bühne — Aussagen ruhig untereinander */
+@media (prefers-reduced-motion: reduce){
+  .story-stage{ height:auto !important; }
+  .story-pin{ position:static; height:auto; display:block; padding:clamp(64px,11vh,96px) 0; }
+  .story-eyebrow{ position:static; margin-bottom:clamp(30px,5vh,44px); }
+  .story-track{ display:block; max-width:680px; margin:0 auto; }
+  .story-step{ opacity:1 !important; transform:none !important; margin-bottom:.95em;
+    font-size:clamp(1.08rem,3.44vw,1.36rem); }
+  .story-dots{ display:none; }
+}
+
+/* ============================================================
+   9. PROGRAMM
+   ============================================================ */
+/* Index-Layout: links nummerierte Liste, rechts Detail-Panel */
+.prog-sub{ color:var(--muted); margin-top:14px; font-size:clamp(1rem,1.5vw,1.12rem); max-width:50ch; }
+.idx{
+  display:grid; grid-template-columns:minmax(0,0.84fr) minmax(0,1.16fr);
+  gap:clamp(18px,2.2vw,34px); align-items:start; margin-top:clamp(34px,4.5vh,54px);
+}
+.idx-list{ display:flex; flex-direction:column; }
+.idx-item{
+  display:flex; align-items:center; gap:18px; width:100%; text-align:left;
+  background:none; border:0; border-bottom:1px solid var(--line); cursor:pointer;
+  color:var(--cream); font:inherit; border-radius:13px;
+  padding:clamp(16px,1.7vw,21px) clamp(15px,1.5vw,22px);
+  transition:background .35s, color .3s;
+}
+.idx-ico{
+  display:flex; align-items:center; justify-content:center;
+  width:30px; min-width:30px; height:30px; color:var(--muted); opacity:.6;
+  transition:color .3s, opacity .3s;
+}
+.idx-ico svg{ width:100%; height:100%; }
+.idx-label{
+  font-family:var(--sans); font-weight:700; letter-spacing:-.005em;
+  font-size:clamp(1.02rem,1.45vw,1.22rem); transition:color .3s;
+}
+.idx-item:hover{ color:var(--gold-soft); }
+.idx-item:hover .idx-ico{ color:var(--gold); opacity:1; }
+.idx-item.is-active{ background:rgba(201,168,106,.1); border-bottom-color:transparent; }
+.idx-item.is-active .idx-ico{ color:var(--gold); opacity:1; }
+.idx-item.is-active .idx-label{ color:var(--gold-soft); }
+
+.idx-panel{
+  display:none; flex-direction:column; min-height:clamp(300px,36vh,390px);
+  border:1px solid var(--line); border-radius:18px; background:var(--dark-2);
+  padding:clamp(30px,3.2vw,48px);
+}
+.idx-cta{ text-align:center; margin-top:clamp(34px,5vh,54px); }
+.idx-panel.is-active{ display:flex; animation:idxIn .45s cubic-bezier(.2,.7,.2,1); }
+@keyframes idxIn{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+.idx-pico{
+  display:flex; color:var(--gold); opacity:.8;
+  width:clamp(42px,5vw,54px); height:clamp(42px,5vw,54px);
+  margin-bottom:clamp(18px,2.4vw,28px);
+}
+.idx-pico svg{ width:100%; height:100%; }
+.idx-panel h3{
+  font-family:var(--sans); font-weight:700; letter-spacing:-.005em; line-height:1.2;
+  font-size:clamp(1.5rem,2.4vw,1.95rem); color:var(--cream); margin-bottom:16px;
+}
+.idx-panel p{ color:var(--muted); font-size:clamp(1rem,1.3vw,1.08rem); line-height:1.75; max-width:52ch; margin:0; }
+.idx-badge{
+  margin-top:24px; align-self:flex-start;
+  font-family:var(--sans); font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold); border:1px solid rgba(201,168,106,.4); border-radius:100px; padding:.42em .9em;
+}
+@media (prefers-reduced-motion: reduce){ .idx-panel.is-active{ animation:none; } }
+@media (max-width:780px){
+  .idx{ grid-template-columns:1fr; gap:18px; }
+  .idx-panel{ min-height:auto; }
+}
+
+/* ============================================================
+   10. ÜBER MICH
+   ============================================================ */
+.about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(36px,5vw,64px); align-items:start; }
+.about-media{ position:sticky; top:110px; }
+.about-photo{
+  aspect-ratio:4/5; border-radius:var(--radius); overflow:hidden;
+  border:1px dashed var(--line);
+  display:grid; place-items:center; text-align:center; padding:24px;
+  background:var(--dark-2); color:var(--muted);
+}
+.about-photo .ph-ico{ color:var(--gold); margin-bottom:14px; opacity:.7; }
+.about-photo small{ font-size:.78rem; letter-spacing:.06em; }
+.about-body h2{ margin-bottom:30px; }
+.about-body p{ color:var(--cream); margin-bottom:1.25em; }
+.about-body p.intro{ font-size:1.12rem; }
+.certs{ margin-top:40px; }
+.certs .eyebrow{ display:block; margin-bottom:18px; }
+.cert-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.cert{
+  aspect-ratio:1/1; border-radius:12px; border:1px dashed var(--line);
+  background:var(--dark-2); display:grid; place-items:center; text-align:center;
+  color:var(--muted); font-size:.72rem; padding:12px; gap:8px;
+}
+.cert svg{ color:var(--gold); opacity:.6; }
+
+/* ============================================================
+   11. KONTAKT
+   ============================================================ */
+.cta-panel{
+  text-align:center; max-width:720px; margin:0 auto;
+  background:var(--dark-2); border:1px solid var(--line); border-radius:20px;
+  padding:clamp(40px,6vw,68px) clamp(26px,5vw,56px);
+  position:relative; overflow:hidden;
+}
+.cta-panel .hero-glow{ top:-40%; right:-20%; opacity:.7; }
+.cta-panel .status{ margin-bottom:24px; }
+.cta-panel h2{ margin-bottom:18px; }
+.cta-panel p{ color:var(--muted); margin:0 auto 32px; max-width:48ch; }
+.cta-panel .btn{ font-size:1.02rem; padding:1.15em 2em; }
+.cta-fine{ margin-top:22px; font-size:.82rem; color:var(--muted); }
+
+/* ---- Plattformen (drei Kernplattformen) ---- */
+.platforms{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2vw,26px); }
+.pf-card{
+  position:relative; overflow:hidden; display:flex; flex-direction:column;
+  background:var(--dark-2); border:1px solid var(--line); border-radius:18px;
+  padding:clamp(26px,2.4vw,36px); text-decoration:none; color:var(--cream);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s, background .4s;
+}
+.pf-card::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0;
+  background:radial-gradient(120% 80% at 50% -10%, rgba(201,168,106,.10), transparent 60%); transition:opacity .4s; }
+.pf-card:hover{ transform:translateY(-6px); border-color:rgba(201,168,106,.4); background:#0C1C15; }
+.pf-card:hover::after{ opacity:1; }
+.pf-top{ display:flex; align-items:center; gap:13px; margin-bottom:26px; }
+.pf-ico{ width:46px; height:46px; border-radius:12px; flex:none; display:grid; place-items:center;
+  border:1px solid var(--line); background:var(--green-2); color:var(--gold); }
+.pf-ico svg{ width:24px; height:24px; }
+.pf-name{ font-size:1.05rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--cream); }
+.pf-title{ font-family:var(--serif); font-weight:600; font-size:1.5rem; color:var(--cream); margin-bottom:14px; }
+.pf-mission{ color:var(--muted); font-size:.98rem; line-height:1.62; margin-bottom:20px; }
+.pf-tag{ align-self:flex-start; font-size:.82rem; font-style:italic; color:var(--gold-soft); line-height:1.4;
+  border-left:2px solid var(--gold); padding-left:13px; margin-bottom:28px; }
+.pf-link{ margin-top:auto; display:inline-flex; align-items:center; gap:8px; font-size:.92rem; font-weight:600; color:var(--gold); }
+.pf-link svg{ transition:transform .35s; }
+.pf-card:hover .pf-link svg{ transform:translateX(4px); }
+@media (max-width:880px){ .platforms{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   12. KONTAKTFORMULAR
+   ============================================================ */
+.contact-wrap{ max-width:600px; margin:0 auto; }
+.contact-intro{ color:var(--muted); margin-top:14px; max-width:50ch; }
+.contact-intro a{ color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(201,168,106,.4); transition:border-color .25s; }
+.contact-intro a:hover{ border-color:var(--gold); }
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+.form-field{ display:flex; flex-direction:column; gap:7px; }
+.form-field label{ font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.form-field input,
+.form-field textarea{
+  background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:10px;
+  padding:.85em 1.1em; color:var(--cream); font-family:var(--sans); font-size:.95rem;
+  width:100%; box-sizing:border-box; transition:border-color .2s;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder{ color:var(--muted); opacity:.5; }
+.form-field input:focus,
+.form-field textarea:focus{ outline:none; border-color:rgba(201,168,106,.6); }
+.form-field textarea{ resize:vertical; min-height:130px; }
+.form-field--full{ grid-column:1 / -1; }
+.form-note{ margin-top:18px; font-size:.8rem; color:var(--muted); }
+@media (max-width:520px){
+  .form-grid{ grid-template-columns:1fr; }
+}
+
+/* ============================================================
+   13. FOOTER
+   ============================================================ */
+.site-footer{ padding:60px 0 40px; border-top:1px solid var(--line); }
+.foot-grid{ display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.foot-logo{ height:26px; }
+.foot-links{ display:flex; flex-wrap:wrap; gap:26px; font-size:.88rem; color:var(--muted); }
+.foot-links a:hover{ color:var(--gold); }
+.foot-copy{ font-size:.82rem; color:var(--muted); margin-top:26px; }
+
+/* ============================================================
+   13. SCROLL-REVEAL
+   ============================================================ */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  html{ scroll-behavior:auto; }
+  .status .dot::after{ animation:none; }
+  /* Bühnen-Crossfade aus: Intro-Screen, dann statische Hero-Sektion */
+  .hero-stage{ height:auto; }
+  .hero-pin{ position:static; height:auto; display:block; overflow:visible; }
+  .intro-layer{ min-height:100svh; }
+  .hero-layer{ opacity:1 !important; transform:none !important; padding:40px 0 24px; }
+  .scroll-hint .arrow::after{ animation:none; }
+}
+
+/* Floating CTA (mobile) */
+.float-cta{
+  position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(120%);
+  z-index:90; transition:transform .4s; display:none;
+}
+.float-cta.show{ transform:translateX(-50%) translateY(0); }
+
+/* ============================================================
+   14. RESPONSIVE
+   ============================================================ */
+@media (max-width:880px){
+  .nav .navlink, .nav .btn{ display:none; }
+  .burger{ display:flex; }
+  /* Bühne bleibt auch auf Mobile gepinnt (svh statt vh wegen mobiler Toolbar) */
+  .hero-pin{ height:100svh; }
+  /* Mobile hero: Foto geht über die gesamte Breite & Höhe, Text liegt unten als Overlay */
+  .hero-layer{ padding:0; display:block; }
+  .hero-wrap{
+    height:100%; max-width:none; padding:0; margin:0;
+    display:block; position:relative; overflow:hidden;
+  }
+  .hero-image{
+    position:absolute; inset:0;
+    max-width:none; margin:0; order:unset;
+  }
+  .hero-image .frame{
+    height:100%; border-radius:0; border:none; box-shadow:none;
+  }
+  .hero-image img{
+    width:100%; height:100%; aspect-ratio:unset;
+    object-fit:cover; object-position:center top;
+  }
+  .hero-caption{ display:none; }
+  .hero-content{
+    position:absolute; bottom:0; left:0; right:0; z-index:3;
+    padding:0 22px 36px;
+    background:linear-gradient(to top, rgba(6,18,13,.97) 42%, rgba(6,18,13,.55) 72%, transparent);
+  }
+  .hero-eye{ font-size:.68rem; margin-bottom:12px; }
+  .hero-h2{ font-size:1.45rem; margin-bottom:14px; white-space:normal; }
+  .hero-sub{ font-size:.8rem; line-height:1.5; margin-bottom:16px; max-width:none; }
+  .status{ font-size:.76rem; margin-bottom:14px; }
+  .hero-ctas{ display:flex; }
+  .hero-ctas .btn{ font-size:.92rem; padding:.95em 1.5em; }
+  .about-grid{ grid-template-columns:1fr; }
+  .about-media{ position:static; max-width:380px; }
+  .cert-row{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:520px){
+  .hero-ctas{ flex-direction:column; align-items:stretch; }
+  .hero-ctas .btn{ justify-content:center; }
+  .foot-grid{ flex-direction:column; align-items:flex-start; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" id="header">
+  <a href="#hero" aria-label="Proaktiv Startseite">
+    <img src="proaktiv-logo.png?v=2" alt="Proaktiv" class="logo">
+  </a>
+  <nav class="nav">
+    <a href="#programm" class="navlink">1:1 Programm</a>
+    <a href="#testimonials" class="navlink">Rezensionen</a>
+    <a href="#about" class="navlink">Über mich</a>
+    <a href="#plattformen" class="navlink">Plattformen</a>
+    <a href="#formular" class="btn">Kontakt aufnehmen</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#programm">1:1 Programm</a>
+  <a href="#testimonials">Rezensionen</a>
+  <a href="#about">Über mich</a>
+  <a href="#plattformen">Plattformen</a>
+  <a href="#formular" class="btn">Kontakt aufnehmen</a>
+</div>
+
+<main>
+
+<!-- ============================================================
+     1 · HERO — Intro-Headline blendet beim Scrollen in die
+     echte Hero-Sektion über (gepinnte Bühne + Crossfade)
+     ============================================================ -->
+<div class="hero-stage" id="hero">
+  <div class="hero-pin">
+    <div class="hero-glow"></div>
+
+    <!-- Layer 1: Intro-Headline (zuerst sichtbar) -->
+    <div class="intro-layer" id="introLayer">
+      <h1 class="intro-h1">5–10 kg Bauchfett verlieren<br><em>5–10 gesunde Lebensjahre gewinnen.</em></h1>
+      <div class="scroll-hint" id="scrollHint">
+        <span>Scrollen</span>
+        <span class="arrow"></span>
+      </div>
+    </div>
+
+    <!-- Layer 2: Echte Hero-Sektion (erscheint dahinter) -->
+    <div class="hero-layer" id="heroLayer">
+      <div class="hero-wrap">
+        <div class="hero-content">
+          <p class="eyebrow hero-eye">Ganzheitliche Gesundheitsberatung</p>
+          <h2 class="hero-h2">Das 1:1 <em>Proaktiv</em> Programm</h2>
+          <p class="hero-sub">
+            In diesem Programm entwickeln Männer 40+ einen athletischen Körper und legen
+            das Fundament für ein langes, vitales Leben — nicht über strikte Diäten, sondern
+            simple Routinen.
+          </p>
+          <div class="hero-ctas">
+            <a href="#formular" class="btn">
+              Auf die Warteliste setzen
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="frame">
+            <img src="hero.jpg" alt="Alexander Seitz, Gründer von Proaktiv und ganzheitlicher Gesundheitsberater" width="500" height="625">
+            <div class="hero-caption">
+              <strong>Alexander Seitz</strong>
+              <span>Proaktiv Gründer · Ganzheitlicher Gesundheitsberater</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     TRUST-LEISTE   (Zahlen vom Inhaber bestätigen/anpassen)
+     ============================================================ -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-row reveal">
+      <div class="trust-item">
+        <span class="trust-num">30.000+</span>
+        <span class="trust-label">YouTube-Abonnenten</span>
+      </div>
+      <span class="trust-sep" aria-hidden="true"></span>
+      <div class="trust-item">
+        <span class="trust-num">2,5 Mio.</span>
+        <span class="trust-label">YouTube-Aufrufe</span>
+      </div>
+      <span class="trust-sep" aria-hidden="true"></span>
+      <div class="trust-item">
+        <span class="trust-num">50+</span>
+        <span class="trust-label">erfolgreiche Klienten</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ============================================================
+     2 · TESTIMONIALS   (Platzhalter — finale Copy folgt)
+     ============================================================ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="results">
+
+      <div class="results-head">
+        <div class="section-head reveal">
+          <span class="eyebrow num" data-num="01">Rezensionen</span>
+          <h2 class="h2">Das sagen <em>Klienten</em></h2>
+        </div>
+        <!-- Trustpilot-Badge (Bewertung Platzhalter) -->
+        <div class="results-aside">
+          <div class="tp-badge" aria-label="5,0 von 5 Sternen auf Trustpilot">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="tp-meta">
+              <span class="tp-score">5,0</span>
+              <span class="tp-sep">·</span>
+              <span class="tp-name"><span class="tp-star" aria-hidden="true">★</span> Trustpilot</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zitate, Namen & Ergebnisse final; Videos = Platzhalter, Alter/Beruf = Platzhalter -->
+      <div class="results-track reveal" id="resultsTrack">
+
+        <article class="r-card r-card--video">
+          <div class="r-video has-thumb" role="button" tabindex="0" aria-label="Video-Testimonial von Deniz abspielen (Platzhalter)">
+            <div class="r-vmedia">
+              <img class="r-thumb" src="deniz.jpg" alt="Deniz" loading="lazy">
+              <span class="r-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="r-duration">Video</span>
+            </div>
+            <div class="r-vquote">
+              <div class="r-quote-mark">”</div>
+              <p class="r-quote">Das war mit Abstand das beste Programm, das ich gemacht habe …</p>
+            </div>
+          </div>
+          <div class="r-foot">
+            <span class="r-avatar">DD</span>
+            <div class="r-person"><span class="r-name">Deniz D.</span><span class="r-meta">40 · Sales Manager</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Für mich war es genau das, wonach ich immer gesucht habe.</p>
+          <ul class="r-check">
+            <li>7,9 kg Bauchfett verloren</li>
+            <li>Blutdruckmedikamente abgesetzt</li>
+            <li>Körpervertrauen zurückgewonnen</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar"><img src="michael-bock.jpg" alt="Michael Bock" width="46" height="46"></span>
+            <div class="r-person"><span class="r-name">Michael Bock</span><span class="r-meta">55 · IT-Abteilungsleiter</span></div>
+          </div>
+        </article>
+
+        <article class="r-card r-card--video">
+          <div class="r-video has-thumb" role="button" tabindex="0" aria-label="Video-Testimonial von Markus abspielen (Platzhalter)">
+            <div class="r-vmedia">
+              <img class="r-thumb" src="markus.jpg" alt="Markus" loading="lazy">
+              <span class="r-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="r-duration">Video</span>
+            </div>
+            <div class="r-vquote">
+              <div class="r-quote-mark">”</div>
+              <p class="r-quote">Meine Gesundheitsroutinen fühlen sich zum ersten Mal nachhaltig an …</p>
+            </div>
+          </div>
+          <div class="r-foot">
+            <span class="r-avatar">MP</span>
+            <div class="r-person"><span class="r-name">Markus Prahl</span><span class="r-meta">41 · Leiter Softwareentwicklung</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">In 12 Wochen mehr erreicht als in den 6 Monaten davor.</p>
+          <ul class="r-check">
+            <li>5,3 kg Körperfett verloren</li>
+            <li>1 kg Muskulatur aufgebaut</li>
+            <li>Schlafqualität spürbar verbessert</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar"><img src="ivo.png" alt="Ivo Juric" width="46" height="46"></span>
+            <div class="r-person"><span class="r-name">Ivo Juric</span><span class="r-meta">34 · Abteilungsleiter Controlling</span></div>
+          </div>
+        </article>
+
+        <article class="r-card r-card--video">
+          <div class="r-video has-thumb" role="button" tabindex="0" aria-label="Video-Testimonial von Tobias Höft abspielen (Platzhalter)">
+            <div class="r-vmedia">
+              <img class="r-thumb" src="tobias-hoeft.jpg" alt="Tobias Höft" loading="lazy">
+              <span class="r-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="r-duration">Video</span>
+            </div>
+            <div class="r-vquote">
+              <div class="r-quote-mark">”</div>
+              <p class="r-quote">Das ist wie ein neues Leben, das jetzt für mich beginnt …</p>
+            </div>
+          </div>
+          <div class="r-foot">
+            <span class="r-avatar">TH</span>
+            <div class="r-person"><span class="r-name">Tobias Höft</span><span class="r-meta">39 · IT-Leiter</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Absolute Empfehlung meinerseits!</p>
+          <ul class="r-check">
+            <li>−9 kg Körperfett</li>
+            <li>+1 kg Muskelmasse</li>
+            <li>Blutdruckmedikamente reduziert</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">VS</span>
+            <div class="r-person"><span class="r-name">Vasco Schuhrmann</span><span class="r-meta">56 · Außendienst</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Der Gewinn an Lebensqualität ist unbezahlbar.</p>
+          <ul class="r-check">
+            <li>7,3 kg Körperfett verloren</li>
+            <li>Verdauungsprobleme gelöst</li>
+            <li>Schlafprobleme gelöst</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">SS</span>
+            <div class="r-person"><span class="r-name">Sebastian Struber</span><span class="r-meta">34 · Geschäftsführer</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Alex ist motivierend, gibt ehrliches Feedback und vor allem wirkungsvolle Empfehlungen.</p>
+          <ul class="r-check">
+            <li>Six-Pack erreicht</li>
+            <li>7,5 kg Körperfett verloren</li>
+            <li>Klarheit bei Gesundheitsthemen</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">TV</span>
+            <div class="r-person"><span class="r-name">Tim Vogt</span><span class="r-meta">40 · Product Owner IT</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Meine Erwartungen wurden übertroffen!</p>
+          <ul class="r-check">
+            <li>6,3 kg Körperfett verloren</li>
+            <li>Alltagsroutinen verankert</li>
+            <li>Energielevel gesteigert</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">MG</span>
+            <div class="r-person"><span class="r-name">Mike G.</span><span class="r-meta">[Alter · Beruf]</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">In drei Monaten habe ich es als 50-jähriger ‚Hardgainer' geschafft, 4 kg Muskulatur zuzunehmen!</p>
+          <ul class="r-check">
+            <li>4 kg Muskelmasse aufgebaut</li>
+            <li>Regeneration optimiert</li>
+            <li>Robuster &amp; kräftiger</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">MJ</span>
+            <div class="r-person"><span class="r-name">Maik Jebramek</span><span class="r-meta">50 · Physiotherapeut i. A.</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Meine neuen Gesundheitsroutinen sind zur Selbstverständlichkeit geworden.</p>
+          <ul class="r-check">
+            <li>5 kg Körperfett verloren</li>
+            <li>Mittagstief aufgelöst</li>
+            <li>Alte Hosen passen wieder</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">SR</span>
+            <div class="r-person"><span class="r-name">Sylvio R.</span><span class="r-meta">47 · Procurement Manager</span></div>
+          </div>
+        </article>
+
+        <article class="r-card">
+          <div class="r-quote-mark">”</div>
+          <p class="r-quote">Ich kann das Programm nur jedem empfehlen, der wirklich etwas verändern will.</p>
+          <ul class="r-check">
+            <li>−26 kg in 12 Monaten</li>
+            <li>Prädiabetes umgekehrt</li>
+            <li>Neue Routinen verankert</li>
+          </ul>
+          <div class="r-foot">
+            <span class="r-avatar">CW</span>
+            <div class="r-person"><span class="r-name">Carlo W.</span><span class="r-meta">24 · Student</span></div>
+          </div>
+        </article>
+
+        <!-- CTA-Karte: Link zu Trustpilot (Platzhalter) -->
+        <a class="r-card r-cta" href="#" aria-label="Mehr Rezensionen auf Trustpilot ansehen">
+          <span class="r-cta-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.95 6.36 6.99.72-5.2 4.7 1.46 6.86L12 17.9l-6.2 3.74 1.46-6.86-5.2-4.7 6.99-.72z"/></svg>
+          </span>
+          <span class="r-cta-text">Mehr Rezensionen<br>auf <em>Trustpilot</em></span>
+          <span class="r-cta-link">
+            Alle ansehen
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+          </span>
+        </a>
+
+      </div>
+
+      <div class="results-bar">
+        <div class="results-dots" id="resultsDots" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3 · REFRAME
+     ============================================================ -->
+<section id="reframe" class="tint">
+  <div class="story-stage" id="storyStage" style="height:1200vh;">
+    <div class="story-pin">
+      <span class="eyebrow num story-eyebrow" data-num="02">Es lag nie an deiner Disziplin</span>
+
+      <div class="story-track" id="storyTrack">
+        <p class="story-step">Viele Männer 40+ sind <em>frustriert …</em></p>
+        <p class="story-step">Der Bauch wird langsam aber sicher <em>größer.</em></p>
+        <p class="story-step">Die ersten <em>„Wehwehchen"</em> schleichen sich ein.</p>
+        <p class="story-step">Und irgendwann leidet auch das <em>Selbstbewusstsein</em> darunter.</p>
+        <p class="story-step">Die meisten kämpfen sich dann durch …
+          <span class="story-list story-list--match">
+            <span>… YouTube-Videos</span>
+            <span>… Diäten</span>
+            <span>… Trainingsprogramme</span>
+            <span>… die neuesten Supplements</span>
+          </span>
+        </p>
+        <p class="story-step">Aber die <em>große Veränderung</em> bleibt aus.<br>Und alte Muster schleichen sich wieder ein.</p>
+        <p class="story-step">Und kurze Zeit später stehen sie <em>an dem gleichen Punkt</em>, an dem sie gestartet sind.</p>
+        <p class="story-step"><span class="story-strong">Nur mit mehr Frustration.</span></p>
+        <p class="story-step">Der scheinbar offensichtliche Grund:<br><em>Fehlende Disziplin.</em></p>
+        <p class="story-step">Aber die Wahrheit ist:<br>Es lag nie an deiner Disziplin.</p>
+        <p class="story-step">Sondern an:<br><em>Mangelnder Individualisierung &amp; fehlender Begleitung</em></p>
+        <p class="story-step">Echte Gesundheitslösungen müssen sich <em>DIR</em> anpassen.<br><em>Deinem Körper.</em><br><em>Deinem Alltag.</em><br><em>Deinen Zielen.</em><br>Nicht andersrum.</p>
+      </div>
+
+      <div class="story-dots" id="storyDots" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4 · DAS PROGRAMM
+     ============================================================ -->
+<section id="programm">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow num" data-num="03">Das 1:1 Programm</span>
+      <h2 class="h2">Das <em>Erfolgsrezept</em> des 1:1 Programms</h2>
+    </div>
+
+    <div class="idx reveal">
+      <div class="idx-list" role="tablist" aria-label="Prinzipien des 1:1 Programms">
+        <button class="idx-item is-active" role="tab" id="idx-t1" aria-controls="idx-p1" aria-selected="true" tabindex="0">
+          <span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round"><path d="M3 7.5h18M3 12h18M3 16.5h18"/><circle cx="8" cy="7.5" r="2" fill="var(--gold)" stroke="none"/><circle cx="15" cy="12" r="2" fill="var(--gold)" stroke="none"/><circle cx="10" cy="16.5" r="2" fill="var(--gold)" stroke="none"/></svg></span><span class="idx-label">Maßgeschneiderte Lösungen</span>
+        </button>
+        <button class="idx-item" role="tab" id="idx-t2" aria-controls="idx-p2" aria-selected="false" tabindex="-1">
+          <span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="2.7"/><path d="M3.8 18.5c0-2.9 2.3-4.9 5.2-4.9s5.2 2 5.2 4.9"/><circle cx="16.5" cy="8" r="2.7" fill="var(--gold)" stroke="none"/><path d="M15.3 13.8c2.4.4 4.2 2.3 4.2 4.7"/></svg></span><span class="idx-label">Persönliche 1:1 Betreuung</span>
+        </button>
+        <button class="idx-item" role="tab" id="idx-t3" aria-controls="idx-p3" aria-selected="false" tabindex="-1">
+          <span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M3.5 20.5h17" stroke-width="0.9"/><path d="M6 20.5v-4M10.5 20.5v-7M15 20.5v-10" stroke-width="1.2"/><path d="M19.5 20.5v-13.5" stroke-width="1.2" stroke="var(--gold)"/></svg></span><span class="idx-label">Messbare Fortschritte</span>
+        </button>
+        <button class="idx-item" role="tab" id="idx-t4" aria-controls="idx-p4" aria-selected="false" tabindex="-1">
+          <span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19.5h4.3v-4.3h4.3v-4.3h4.3"/><circle cx="18" cy="8.7" r="2" fill="var(--gold)" stroke="none"/></svg></span><span class="idx-label">Schritt für Schritt</span>
+        </button>
+        <button class="idx-item" role="tab" id="idx-t5" aria-controls="idx-p5" aria-selected="false" tabindex="-1">
+          <span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.4 2" stroke="var(--gold)"/></svg></span><span class="idx-label">Zeit-Effizienz</span>
+        </button>
+        <button class="idx-item" role="tab" id="idx-t6" aria-controls="idx-p6" aria-selected="false" tabindex="-1">
+          <span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.6"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="14.6" r="1.3" fill="var(--gold)" stroke="none"/><path d="M12 15.9v1.6" stroke="var(--gold)"/></svg></span><span class="idx-label">Garantierte Resultate</span>
+        </button>
+      </div>
+
+      <div class="idx-panels">
+        <div class="idx-panel is-active" role="tabpanel" id="idx-p1" aria-labelledby="idx-t1" tabindex="0">
+          <span class="idx-pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round"><path d="M3 7.5h18M3 12h18M3 16.5h18"/><circle cx="8" cy="7.5" r="2" fill="var(--gold)" stroke="none"/><circle cx="15" cy="12" r="2" fill="var(--gold)" stroke="none"/><circle cx="10" cy="16.5" r="2" fill="var(--gold)" stroke="none"/></svg></span>
+          <h3>Maßgeschneiderte Lösungen</h3>
+          <p>Egal, ob es um Ernährung, Erholung, Schlaf, Bewegung oder Training geht — alle Maßnahmen werden nach einem umfangreichen Evaluierungsprozess maßgeschneidert an deine Bedürfnisse, Ziele und Alltagssituation angepasst.</p>
+        </div>
+        <div class="idx-panel" role="tabpanel" id="idx-p2" aria-labelledby="idx-t2" tabindex="0">
+          <span class="idx-pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="2.7"/><path d="M3.8 18.5c0-2.9 2.3-4.9 5.2-4.9s5.2 2 5.2 4.9"/><circle cx="16.5" cy="8" r="2.7" fill="var(--gold)" stroke="none"/><path d="M15.3 13.8c2.4.4 4.2 2.3 4.2 4.7"/></svg></span>
+          <h3>Persönliche 1:1 Betreuung</h3>
+          <p>Auf dem Weg zu deinem Ziel wirst du persönlich von mir unterstützt. So hast du jederzeit einen Ansprechpartner für Fragen und wirst in den richtigen Momenten angeschoben (oder gebremst), um maximale Fortschritte zu erzielen.</p>
+        </div>
+        <div class="idx-panel" role="tabpanel" id="idx-p3" aria-labelledby="idx-t3" tabindex="0">
+          <span class="idx-pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M3.5 20.5h17" stroke-width="0.9"/><path d="M6 20.5v-4M10.5 20.5v-7M15 20.5v-10" stroke-width="1.2"/><path d="M19.5 20.5v-13.5" stroke-width="1.2" stroke="var(--gold)"/></svg></span>
+          <h3>Messbare Fortschritte</h3>
+          <p>Im 1:1 Programm wird nicht geraten, sondern gemessen. Dafür nutzen wir innovative Analyse- und Tracking-Methoden, um deine Gesundheit und Fitness messbar auf ein neues Level zu heben.</p>
+        </div>
+        <div class="idx-panel" role="tabpanel" id="idx-p4" aria-labelledby="idx-t4" tabindex="0">
+          <span class="idx-pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19.5h4.3v-4.3h4.3v-4.3h4.3"/><circle cx="18" cy="8.7" r="2" fill="var(--gold)" stroke="none"/></svg></span>
+          <h3>Schritt für Schritt</h3>
+          <p>Jede gesunde Routine wird präzise und leicht umsetzbar in deinen Alltag integriert, ohne für Stress oder Überforderung zu sorgen. Die Anpassungen erfolgen Schritt für Schritt, in individuellem Tempo, um nachhaltige Erfolge sicherzustellen.</p>
+        </div>
+        <div class="idx-panel" role="tabpanel" id="idx-p5" aria-labelledby="idx-t5" tabindex="0">
+          <span class="idx-pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.4 2" stroke="var(--gold)"/></svg></span>
+          <h3>Zeit-Effizienz</h3>
+          <p>Kaum jemand hat Zeit, fünfmal pro Woche ins Fitnessstudio zu gehen, Kalorien zu zählen und jede Mahlzeit vorzukochen. Deshalb arbeiten wir im 1:1 Programm mit effizienten Lösungen, die minimalen Zeitaufwand erfordern.</p>
+        </div>
+        <div class="idx-panel" role="tabpanel" id="idx-p6" aria-labelledby="idx-t6" tabindex="0">
+          <span class="idx-pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.6"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="14.6" r="1.3" fill="var(--gold)" stroke="none"/><path d="M12 15.9v1.6" stroke="var(--gold)"/></svg></span>
+          <h3>Garantierte Resultate</h3>
+          <p>Solltest du innerhalb der ersten 30 Tage nicht 100% von der Zusammenarbeit überzeugt sein, erhältst du deine volle Investition zurück. Somit hast du nichts zu verlieren und alles zu gewinnen.</p>
+          <span class="idx-badge">30-Tage-Garantie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="idx-cta reveal">
+      <a href="#formular" class="btn">
+        Kontakt aufnehmen
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5 · ÜBER MICH
+     ============================================================ -->
+<section id="about" class="tint-2">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-media reveal">
+        <div class="about-photo">
+          <div>
+            <svg class="ph-ico" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="2"/><path d="M21 16l-5-5L5 21"/></svg>
+            <small>Platzhalter · Foto von Alexander Seitz</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <span class="eyebrow num reveal" data-num="04" style="display:block;margin-bottom:16px;">Über mich</span>
+        <h2 class="h2 reveal">Alexander Seitz —<br><em>Ganzheitlicher Gesundheitsberater</em></h2>
+
+        <div class="reveal">
+          <p class="intro">Schon als junges Kind hatte ich das Glück, in Kontakt mit verschiedensten Sportarten wie Fußball, Snowboarden, Skifahren, Wandern und Klettern zu kommen — und entwickelte dadurch schnell eine Leidenschaft für alles, was mit Bewegung und Sport zu tun hat.</p>
+          <p>Ein Wendepunkt kam 2018, als ich mir bei einem Fußballspiel das Kreuzband riss und einen Meniskusriss zuzog. Diese Verletzung brachte mich dazu, mich intensiv mit Regeneration, Ernährung, Krafttraining, Nahrungsergänzung und der Biologie dahinter auseinanderzusetzen.</p>
+          <p>Was zuerst der Heilung diente, entwickelte sich schnell zu einer echten Leidenschaft. Ich wollte nicht nur wieder fit werden, sondern stärker, leistungsfähiger und gesünder als zuvor.</p>
+          <p>Nicht, um Wettkämpfe zu gewinnen, sondern um — im Idealfall — auch mit 70 Jahren noch Snowboarden, Surfen und mit den Enkeln Fußball spielen zu können.</p>
+          <p>Ich experimentierte, lernte und vertiefte mein Wissen kontinuierlich. Im Laufe der Jahre absolvierte ich verschiedene private Ausbildungen und Seminare in den Bereichen Ernährung, Training, Genetik und Epigenetik.</p>
+          <p>Seit 2023 helfe ich meinen Klienten mit meiner Expertise, Erfahrung und praxiserprobten Methoden, ihre persönliche Topform zu erreichen und die gesundheitliche Basis für ein langes, gesundes Leben zu schaffen.</p>
+        </div>
+
+        <div class="certs reveal">
+          <span class="eyebrow">Ausbildungen &amp; Zertifikate</span>
+          <div class="cert-row">
+            <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>[Zertifikat]</div>
+            <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>[Zertifikat]</div>
+            <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>[Zertifikat]</div>
+            <div class="cert"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>[Zertifikat]</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6 · KONTAKT / WARTELISTE
+     ============================================================ -->
+<!-- Platzhalter-Links: href="#" später durch echte URLs ersetzen (YouTube-Kanal, Podcast, Newsletter-Anmeldung) -->
+<section id="plattformen">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow num" data-num="05">Plattformen</span>
+      <h2 class="h2">Wo ich <em>Wissen teile</em></h2>
+      <p class="lead">Drei Kernplattformen, auf denen ich proaktive Gesundheit greifbar mache — von tiefen Gesprächen bis zu kompakten Impulsen für deinen Alltag.</p>
+    </div>
+
+    <div class="platforms reveal">
+
+      <!-- YouTube -->
+      <a class="pf-card" href="#" target="_blank" rel="noopener" aria-label="YouTube-Kanal öffnen">
+        <span class="pf-top">
+          <span class="pf-ico">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19a2.78 2.78 0 0 0-1.96-1.97C17.88 4.75 12 4.75 12 4.75s-5.88 0-7.62.47A2.78 2.78 0 0 0 2.42 7.19 29.3 29.3 0 0 0 1.95 12c0 1.62.16 3.23.47 4.81a2.78 2.78 0 0 0 1.96 1.97c1.74.47 7.62.47 7.62.47s5.88 0 7.62-.47a2.78 2.78 0 0 0 1.96-1.97c.31-1.58.47-3.19.47-4.81 0-1.62-.16-3.23-.47-4.81ZM10.1 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
+          </span>
+          <span class="pf-name">YouTube</span>
+        </span>
+        <p class="pf-mission">Informationen teilen, die einen proaktiv gesunden Lebensstil verständlich, anwendbar und populär machen.</p>
+        <span class="pf-tag">Pushing the shift from reactive to proactive</span>
+        <span class="pf-link">Kanal ansehen
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+        </span>
+      </a>
+
+      <!-- Podcast -->
+      <a class="pf-card" href="#" target="_blank" rel="noopener" aria-label="Podcast öffnen">
+        <span class="pf-top">
+          <span class="pf-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>
+          </span>
+          <span class="pf-name">Podcast</span>
+        </span>
+        <p class="pf-mission">Von Experten lernen und dieses Wissen für jeden verfügbar machen — und dabei meinen eigenen Horizont und den der Zuhörer erweitern.</p>
+        <span class="pf-tag">Wissen zugänglich machen</span>
+        <span class="pf-link">Reinhören
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+        </span>
+      </a>
+
+      <!-- Newsletter -->
+      <a class="pf-card" href="#" aria-label="Newsletter abonnieren">
+        <span class="pf-top">
+          <span class="pf-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7 12 13l8.5-6"/></svg>
+          </span>
+          <span class="pf-name">Newsletter</span>
+        </span>
+        <p class="pf-mission">Bleib auf dem Laufenden — die wichtigsten Erkenntnisse und Impulse regelmäßig direkt in dein Postfach.</p>
+        <span class="pf-tag">Stay up to date</span>
+        <span class="pf-link">Abonnieren
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7 · KONTAKTFORMULAR
+     ============================================================ -->
+<section id="formular" class="tint">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow num" data-num="06">Kontakt</span>
+      <h2 class="h2">Schreib mir <em>direkt</em></h2>
+      <p class="contact-intro">Bei Fragen oder Anregungen schreib mir gerne eine Nachricht über das Kontaktformular oder an: <a href="mailto:kontakt@alexander-seitz.com">kontakt@alexander-seitz.com</a></p>
+    </div>
+    <div class="contact-wrap reveal">
+      <!-- Formular-Backend: action durch Formspree-URL ersetzen, z.B. https://formspree.io/f/XXXXXXX -->
+      <form action="https://formspree.io/f/XXXXXXX" method="POST">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" name="vorname" placeholder="Max" required>
+          </div>
+          <div class="form-field">
+            <label for="nachname">Nachname</label>
+            <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required>
+          </div>
+          <div class="form-field form-field--full">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="max@beispiel.de" required>
+          </div>
+          <div class="form-field form-field--full">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Deine Frage oder Nachricht …" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn">
+          Nachricht senden
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7.5h11M8 3l4.5 4.5L8 12"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <img src="proaktiv-logo.png?v=2" alt="Proaktiv" class="foot-logo">
+      <nav class="foot-links">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+    <p class="foot-copy">© <span id="year">2026</span> Alexander Seitz · Proaktiv — Ganzheitliche Gesundheitsberatung. Berlin. &nbsp;[Impressum &amp; Datenschutz folgen]</p>
+  </div>
+</footer>
+
+<!-- Floating CTA für Mobile -->
+<a href="#formular" class="btn float-cta" id="floatCta">Kontakt aufnehmen</a>
+
+<script>
+/* ---- Header scroll state ---- */
+const header = document.getElementById('header');
+const floatCta = document.getElementById('floatCta');
+const onScroll = () => {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 30);
+  floatCta.classList.toggle('show', y > (document.getElementById('hero')?.offsetHeight ?? 600));
+};
+window.addEventListener('scroll', onScroll, { passive:true });
+onScroll();
+
+/* ---- Hero-Bühne: Intro-Headline → Crossfade in die echte Hero-Sektion ---- */
+const heroStage  = document.getElementById('hero');
+const introLayer = document.getElementById('introLayer');
+const heroLayer  = document.getElementById('heroLayer');
+const scrollHint = document.getElementById('scrollHint');
+const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+const mqStatic = window.matchMedia('(prefers-reduced-motion: reduce)');
+let heroTicking = false;
+function heroStageUpdate(){
+  heroTicking = false;
+  if (mqStatic.matches){                   // Mobile / Reduced-Motion: keine Bühne — Inline-Styles räumen, CSS übernimmt
+    introLayer.style.opacity = heroLayer.style.opacity = scrollHint.style.opacity = '';
+    introLayer.style.transform = heroLayer.style.transform = '';
+    return;
+  }
+  const total = heroStage.offsetHeight - window.innerHeight;
+  const scrolled = clamp(-heroStage.getBoundingClientRect().top, 0, total);
+  const p = total > 0 ? scrolled / total : 0;
+  const introP = clamp(p / 0.55, 0, 1);    // Intro blendet aus: p 0 → 0.55
+  introLayer.style.opacity = (1 - introP).toFixed(3);
+  introLayer.style.transform = `translateY(${(-46 * introP).toFixed(1)}px) scale(${(1 - 0.06 * introP).toFixed(3)})`;
+  const heroP = clamp((p - 0.42) / 0.58, 0, 1); // Hero blendet ein: p 0.42 → 1
+  heroLayer.style.opacity = heroP.toFixed(3);
+  heroLayer.style.transform = `translateY(${(34 * (1 - heroP)).toFixed(1)}px)`;
+  scrollHint.style.opacity = (1 - clamp(p / 0.14, 0, 1)).toFixed(3);
+}
+function heroOnScroll(){ if (!heroTicking){ heroTicking = true; requestAnimationFrame(heroStageUpdate); } }
+window.addEventListener('scroll', heroOnScroll, { passive:true });
+window.addEventListener('resize', heroStageUpdate);
+mqStatic.addEventListener('change', heroStageUpdate);
+heroStageUpdate();
+
+/* ---- Scroll-Story (Reframe): Aussagen nacheinander ein-/ausblenden (auch mobil) ---- */
+const mqStoryStatic = window.matchMedia('(prefers-reduced-motion: reduce)');
+const storyStage = document.getElementById('storyStage');
+const storySteps = [...document.querySelectorAll('#storyTrack .story-step')];
+const storyDotsWrap = document.getElementById('storyDots');
+storySteps.forEach(() => storyDotsWrap.insertAdjacentHTML('beforeend', '<i></i>'));
+const storyDots = [...storyDotsWrap.children];
+let storyTicking = false;
+function storyUpdate(){
+  storyTicking = false;
+  if (mqStoryStatic.matches){               // nur Reduced-Motion: alles statisch sichtbar
+    storySteps.forEach(s => { s.style.opacity = ''; s.style.transform = ''; });
+    return;
+  }
+  const N = storySteps.length;
+  const total = storyStage.offsetHeight - window.innerHeight;
+  const scrolled = clamp(-storyStage.getBoundingClientRect().top, 0, total);
+  const p = total > 0 ? scrolled / total : 0;
+  const pos = p * (N - 1);                   // aktuelle (fraktionale) Aussage: 0 … N-1
+  const active = Math.round(pos);
+  storySteps.forEach((el, i) => {
+    const dist = Math.abs(pos - i);
+    const o = clamp(1 - (dist - 0.34) / 0.34, 0, 1);   // Plateau in der Mitte + weicher Crossfade
+    el.style.opacity = o.toFixed(3);
+    el.style.transform = `translateY(${((pos - i) * -16).toFixed(1)}px)`;
+  });
+  storyDots.forEach((d, i) => d.classList.toggle('on', i === active));
+}
+function storyOnScroll(){ if (!storyTicking){ storyTicking = true; requestAnimationFrame(storyUpdate); } }
+window.addEventListener('scroll', storyOnScroll, { passive:true });
+window.addEventListener('resize', storyUpdate);
+mqStoryStatic.addEventListener('change', storyUpdate);
+storyUpdate();
+
+/* ---- Mobile menu ---- */
+const burger = document.getElementById('burger');
+const menu = document.getElementById('mobileMenu');
+const toggleMenu = (open) => {
+  menu.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+burger.addEventListener('click', () => toggleMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+/* ---- Scroll reveal ---- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting){
+      const siblings = [...e.target.parentElement.children].filter(c => c.classList.contains('reveal'));
+      const idx = siblings.indexOf(e.target);
+      e.target.style.transitionDelay = Math.min(idx, 5) * 80 + 'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---- Programm-Index (Tabs): Klick wählt ein Prinzip, rechts wechselt das Panel ---- */
+(() => {
+  const tabs = [...document.querySelectorAll('.idx-item')];
+  const panels = [...document.querySelectorAll('.idx-panel')];
+  if (!tabs.length) return;
+  const activate = (i) => {
+    tabs.forEach((t, n) => {
+      const on = n === i;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      panels[n].classList.toggle('is-active', on);
+    });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => activate(i));
+    t.addEventListener('keydown', (e) => {
+      let j = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') j = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
+      if (j !== null){ e.preventDefault(); activate(j); tabs[j].focus(); }
+    });
+  });
+})();
+
+/* ---- Ergebnisse-Karussell: Pfeile, Punkte, Wischen ---- */
+(() => {
+  const track = document.getElementById('resultsTrack');
+  if (!track) return;
+  const cards = [...track.children];
+  const dotsWrap = document.getElementById('resultsDots');
+  const prev = document.querySelector('.r-arrow[data-dir="-1"]');
+  const next = document.querySelector('.r-arrow[data-dir="1"]');
+  cards.forEach((_, i) => dotsWrap.insertAdjacentHTML('beforeend', `<i data-i="${i}"></i>`));
+  const dots = [...dotsWrap.children];
+  const stepW = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 24);
+  let ticking = false;
+  function update(){
+    ticking = false;
+    const i = Math.round(track.scrollLeft / stepW());
+    dots.forEach((d, n) => d.classList.toggle('on', n === i));
+    if (prev) prev.disabled = track.scrollLeft < 4;
+    if (next) next.disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 4;
+  }
+  track.addEventListener('scroll', () => { if (!ticking){ ticking = true; requestAnimationFrame(update); } }, { passive:true });
+  window.addEventListener('resize', update);
+  prev && prev.addEventListener('click', () => track.scrollBy({ left:-stepW(), behavior:'smooth' }));
+  next && next.addEventListener('click', () => track.scrollBy({ left:stepW(), behavior:'smooth' }));
+  dots.forEach((d, i) => d.addEventListener('click', () => track.scrollTo({ left:stepW() * i, behavior:'smooth' })));
+  track.querySelectorAll('.r-video').forEach(v => {
+    const fire = () => alert('Platzhalter: Hier wird später dein Video-Testimonial eingebunden.');
+    v.addEventListener('click', fire);
+    v.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); fire(); } });
+  });
+  update();
+})();
+
+/* ---- Year ---- */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
